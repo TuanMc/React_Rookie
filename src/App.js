@@ -1,25 +1,25 @@
 import logo from './logo.svg';
+import React, { Component, useState } from 'react';
 import './App.css';
+import Home from './components/Home.js'
+import Nav from './components/Nav';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  constructor(props) {
+    super(props);
+    //Chỉ định một state
+    this.state = { bootcamp: 'Rookies' };
+  }
+  render(){
+    return (
+      <div className="App">
+        <Nav></Nav>
+        <Home props={this.state.bootcamp}></Home>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
