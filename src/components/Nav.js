@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
-import './Nav.css'
+import './Nav.css';
 export default function Nav () {
-  const [username, setUsername]= useState('Hieu')
+  const [username, setUsername]= useState('Hieu');
     return (
       <div >
         <nav id='navbar'>
