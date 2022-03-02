@@ -15,7 +15,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <Nav></Nav>
-        <Home props={this.state.bootcamp}></Home>
+        <Home props={this.state.bootcamp}></Home> <!-- Shouldn't use 'props' as key name -->
       </div>
     );
   }
